@@ -1,0 +1,3 @@
+Trabalho prático 02 Para discilpina de Sistemas Digitais 
+Integrantes: Bernardo Lignati e Lucas Augusto Tansini.
+Desenvolvimento do processador Neander em VHDL.
