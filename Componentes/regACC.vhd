@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: Lucas Augusto Tansini
 -- 
--- Create Date:    14:51:55 06/03/2017 
+-- Create Date:    00:35:24 06/04/2017 
 -- Design Name: 
--- Module Name:    mux21 - Behavioral 
+-- Module Name:    regACC - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -29,28 +29,32 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mux21neander is
-    Port ( entradaAMux21 : in  STD_LOGIC_VECTOR (7 downto 0);
-           entradaBMux21 : in  STD_LOGIC_VECTOR (7 downto 0);
-           selMux21 : in  STD_LOGIC;
-           outputMux21 : out  STD_LOGIC_VECTOR (7 downto 0));
-end mux21neander;
+entity regACC is
+    Port ( cargaAC : in  STD_LOGIC;
+           entradaAC : in  STD_LOGIC_VECTOR (7 downto 0);
+           saidaAC : out  STD_LOGIC_VECTOR (7 downto 0);
+			  clk,reset : in STD_LOGIC);
+end regACC;
 
-architecture Behavioral of mux21neander is
+architecture Behavioral of regACC is
+
+signal acc : STD_LOGIC_VECTOR (7 downto 0);
 
 begin
 
-	
-	process(entradaAMux21,entradaBMux21,selMux21)
+	process (clk,reset)
 	begin
 	
-		case selMux21 is
-				when '0' => outputMux21 <= entradaAMux21;
-				when others => outputMux21 <= entradaBMux21;
-		end case;
+		if reset = '1' then 
+			acc <= "00000000";
+		elsif clk'event and clk ='1' then
+			if cargaAC = '1' then
+				acc <= entradaAC;
+			end if;
+		end if;
 	end process;
 
-
+saidaAC <= acc;
 
 end Behavioral;
 
