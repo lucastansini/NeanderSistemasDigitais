@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Company: 
--- Engineer: 
+-- Engineer: Bernardo Lignati
 -- 
 -- Create Date:    20:54:56 06/03/2017 
 -- Design Name: 
@@ -27,7 +27,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
 --library UNISIM;
---use UNISIM.VComponents.all;
+--use UNISIM.VCompone0nts.all;
 
 entity fsm is
     Port ( clk : in  STD_LOGIC;
@@ -45,7 +45,8 @@ entity fsm is
            cargaPC : out  STD_LOGIC;
            cargaNZ : out  STD_LOGIC;
            cargaAcc : out  STD_LOGIC;
-           cargaRDM : out  STD_LOGIC);
+           cargaRDM : out  STD_LOGIC;
+			  selRDM   : out  std_logic);
 end fsm;
 
 architecture Behavioral of fsm is
@@ -65,6 +66,7 @@ signal fioCargaPC  : STD_LOGIC;
 signal fioCargaNZ  : STD_LOGIC;
 signal fioCargaAcc : STD_LOGIC;
 signal fioCargaRDM : STD_LOGIC;
+signal fioSelRDM   : STD_LOGIC;
 
 -- sinais que agrupam instrucoes em grupos
 signal ula2op : std_logic;
@@ -105,6 +107,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc  <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado   <= S1;
 				
@@ -120,6 +123,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado   <= s2;
 				
@@ -136,6 +140,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				if operacao = "0000000000000000"                  				 then proxEstado <= s0;
 				elsif Ula1op = '1'                     			             then proxEstado <= s3;
@@ -160,6 +165,7 @@ begin
 				fioCargaNZ   <= '1';
 				fioCargaAcc <= '1';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado   <= s0;
 				
@@ -175,6 +181,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				if 	 j = '1' then proxEstado <= s10;
 				elsif  (ula2op = '1' or operacao(10) = '1') then proxEstado <= s6;
@@ -193,6 +200,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado   <= s0;
 				
@@ -208,6 +216,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado <= s7;
 				
@@ -223,6 +232,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado   <= s8;
 				
@@ -238,6 +248,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '1';
+				fioSelRDM    <= '0';
 				
 				if     operacao(1) = '1' then proxEstado <= s9;
 				elsif  ula2op      = '1' then proxEstado <= s13;
@@ -256,6 +267,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '1';
 				
 				proxEstado <= s0;
 	
@@ -271,6 +283,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc  <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado <= s11;
 				
@@ -287,6 +300,7 @@ begin
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado <= s0;
 			
@@ -308,6 +322,7 @@ begin
 				fioCargaNZ   <= '1';
 				fioCargaAcc  <= '1';
 				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
 				
 				proxEstado <= s0;
 			end case;
@@ -325,6 +340,7 @@ begin
 				carganz  <= fioCargaNZ;
 				cargaAcc <= fioCargaAcc;
 				cargaRDM <= fioCargaRDM;
+				selRDM   <=fioSelRDM;
 		
 end Behavioral;
 

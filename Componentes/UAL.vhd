@@ -37,8 +37,8 @@ entity UAL is
            outputUAL : out  STD_LOGIC_VECTOR (7 downto 0);
            N : out  STD_LOGIC;
            Z : out  STD_LOGIC;
-           selUAL : in  STD_LOGIC_VECTOR (2 downto 0);
-			  clk: in STD_LOGIC );
+           selUAL : in  STD_LOGIC_VECTOR (2 downto 0)
+			  );
 end UAL;
 
 architecture Behavioral of UAL is
@@ -46,10 +46,10 @@ architecture Behavioral of UAL is
 signal isZERO,isNEGATIVE : STD_LOGIC; 
 signal output: STD_LOGIC_VECTOR( 7 downto 0);
 signal mult_aux, mult_aux2 : STD_LOGIC_VECTOR( 3 downto 0);
-
+ 
 begin
 
-	process (clk,X,Y,selUAL,output)
+	process (X,Y,selUAL,output)
 		begin
 		
 		mult_aux(0)<=X(0);
@@ -61,7 +61,6 @@ begin
 		mult_aux2(2)<=Y(2);
 		mult_aux2(3)<=Y(3);
 								  
-		if clk'event and clk = '1' then
 			case selUAL is
 				when "000" => output <= X + Y;
 				when "001" => output <= X and Y;
@@ -83,7 +82,7 @@ begin
 									 output(0) <= '0';
 				when others => output <= "00000000";
 			 end case;
-		 end if;
+
 		 
 		 if output = "00000000" then 
 			isZERO <= '1'; 
