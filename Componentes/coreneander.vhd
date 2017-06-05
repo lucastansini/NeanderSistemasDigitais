@@ -196,9 +196,9 @@ signal wireRiOut : STD_LOGIC_VECTOR ( 7 downto 0);
 
 signal wireDecFsmOut : STD_LOGIC_VECTOR (15 downto 0);
 
-signal wireWriteMemory : STD_LOGIC;
+signal wireWriteMemory : STD_LOGIC_vector (0 downto 0);
 
-signal wireRead : STD_LOGIC;
+signal wireRead :  STD_LOGIC;
 
 signal wireWrite : STD_LOGIC;
 
@@ -212,7 +212,7 @@ signal wireMuxToRdm :  STD_LOGIC_VECTOR ( 7 downto 0);
 
 begin
 
-wireWriteMemory <= ((not wireRead) and wireWrite); 
+wireWriteMemory(0) <= ((not wireRead) and wireWrite); 
 
 
 FSMNeander : fsm
