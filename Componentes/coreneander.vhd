@@ -31,11 +31,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity coreneander is
     Port ( clk : in  STD_LOGIC;
-           reset : in  STD_LOGIC;
+           reset,rstmem : in  STD_LOGIC;
+			  
            outZ : out  STD_LOGIC;
            outN : out  STD_LOGIC;
            outACC : out  STD_LOGIC_VECTOR (7 downto 0);
-           outPC : out  STD_LOGIC_VECTOR (7 downto 0));
+           outPC : out  STD_LOGIC_VECTOR (7 downto 0);
+			  wireLSBRIOut : out STD_LOGIC_VECTOR ( 3 downto 0);
+			  outIR: out std_logic_vector (7 downto 0);
+			  outSinalRI:out std_logic;
+			  outsinalread:out std_logic;
+			  outsinalREM: out std_logic;
+			  outpccarga : out std_logic
+			  );
 end coreneander;
 
 architecture Behavioral of coreneander is
@@ -57,8 +65,8 @@ COMPONENT memoryNeander IS
     doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT memoryNeander;
-
-
+ 
+ 
 
 
 
@@ -186,8 +194,6 @@ signal wireLoadRem : STD_LOGIC;
 
 signal wireLoadRdm : STD_LOGIC;
 
-signal wireRdmIn : STD_LOGIC_VECTOR ( 7 DOWNTO 0 );
-
 signal wireSelMRDM : STD_LOGIC ;
 
 signal wireRiLoad : STD_LOGIC;
@@ -204,15 +210,16 @@ signal wireWrite : STD_LOGIC;
 
 signal wireMemoryOut : STD_LOGIC_VECTOR ( 7 downto 0);
 
-signal outputDump : STD_LOGIC_VECTOR ( 7 downto 0);
-
 signal wireMuxToRdm :  STD_LOGIC_VECTOR ( 7 downto 0);
+
+signal wireRiOutSignal: STD_LOGIC_VECTOR (3 downto 0);
 
 
 
 begin
 
 wireWriteMemory(0) <= ((not wireRead) and wireWrite); 
+wireRiOutSignal <= wireRiOut(3 downto 0);
 
 
 FSMNeander : fsm
@@ -336,25 +343,24 @@ MEMORY : memoryNeander
     clka => clk,
     wea =>  wireWriteMemory,
     addra => wireRemOut,
-    dina => wireMemoryOut,
+    dina => wireRDMOut ,
     clkb => clk,
-    rstb => reset,
-    addrb => wireMemoryOut,
-    doutb => outputDump
+    rstb => rstmem,
+    addrb => wireREMOut,
+    doutb => wireMemoryOut
 	 );
 
-
-
-
-	process(clk,reset)
-	begin
-
-	
-	
-	
-	end process;
-
-
+ 
+outZ <= wireZout; 
+outN <= wireNout;
+outPC <= wirePCOut;
+outACC <= wireAccOut;
+wireLSBRIOut <= wireRiOutSignal;
+outIR <= wireRiOut;
+outSinalRi <= wireriload;
+outSinalRead <= wireread;
+outSinalREM <= wireloadREM;
+outpccarga <= wireFsmPcInc;
 
 end Behavioral;
 

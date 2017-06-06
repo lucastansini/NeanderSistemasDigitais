@@ -89,7 +89,7 @@ begin
 	-- inicio da descricao da fsm
 	process(clk,rst) begin
 		if rst = '1' then estado <= s0;
-		elsif (clk' event and clk = '1') then estado <= proxEstado;
+		elsif (clk'event and clk = '1') then estado <= proxEstado;
 		end if;
 	end process;
 	process(estado,operacao,ula1op,ula2op,j,nj) begin
@@ -146,7 +146,7 @@ begin
 				elsif Ula1op = '1'                     			             then proxEstado <= s3;
 				elsif (ula2op = '1' or j ='1' or operacao(1)= '1')           then proxEstado <= s4;
 				elsif nj     = '1'                  			                then proxEstado <= s5;
-				elsif operacao = "0000000000000001"             			    then proxEstado <= estado;
+				--elsif operacao = "0000000000000001"             			    then proxEstado <= estado;
 				else proxEstado <= s0;
 				end if;
 				
