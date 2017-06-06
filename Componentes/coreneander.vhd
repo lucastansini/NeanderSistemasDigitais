@@ -37,12 +37,16 @@ entity coreneander is
            outN : out  STD_LOGIC;
            outACC : out  STD_LOGIC_VECTOR (7 downto 0);
            outPC : out  STD_LOGIC_VECTOR (7 downto 0);
-			  wireLSBRIOut : out STD_LOGIC_VECTOR ( 3 downto 0);
-			  outIR: out std_logic_vector (7 downto 0);
+			  outIR: out std_logic_vector (3 downto 0);
 			  outSinalRI:out std_logic;
 			  outsinalread:out std_logic;
 			  outsinalREM: out std_logic;
-			  outpccarga : out std_logic
+			  outpccarga : out std_logic;
+			   outmemoria: OUT STD_LOGIC_VECTOR (7 downto 0);
+				saidaRDM: OUT STd_logic_Vector (7 downto 0);
+				selmuxrdm : out std_logic;
+				outRIcarga: OUT std_logic;
+				teste4bits: OUT STD_LOGIC_VECTOR (3 downto 0)
 			  );
 end coreneander;
 
@@ -67,7 +71,7 @@ COMPONENT memoryNeander IS
 END COMPONENT memoryNeander;
  
  
-
+ 
 
 
 
@@ -126,6 +130,19 @@ component acc2bits is
            Zout : out  STD_LOGIC;
            Nout : out  STD_LOGIC);
 end component;
+
+
+--RI
+
+
+COMPONENT regRI is
+   Port ( entradaRI : in  STD_LOGIC_VECTOR (7 downto 0);
+           saidaRI : out  STD_LOGIC_VECTOR (3 downto 0);
+           clk : in  STD_LOGIC;
+			  cargaRi : in STD_LOGIC;
+           reset : in  STD_LOGIC);
+END COMPONENT;
+
 
 --PC
 
@@ -198,8 +215,6 @@ signal wireSelMRDM : STD_LOGIC ;
 
 signal wireRiLoad : STD_LOGIC;
 
-signal wireRiOut : STD_LOGIC_VECTOR ( 7 downto 0);
-
 signal wireDecFsmOut : STD_LOGIC_VECTOR (15 downto 0);
 
 signal wireWriteMemory : STD_LOGIC_vector (0 downto 0);
@@ -212,15 +227,12 @@ signal wireMemoryOut : STD_LOGIC_VECTOR ( 7 downto 0);
 
 signal wireMuxToRdm :  STD_LOGIC_VECTOR ( 7 downto 0);
 
-signal wireRiOutSignal: STD_LOGIC_VECTOR (3 downto 0);
-
+signal wireridecode : std_logic_vector (3 downto 0);
 
 
 begin
 
 wireWriteMemory(0) <= ((not wireRead) and wireWrite); 
-wireRiOutSignal <= wireRiOut(3 downto 0);
-
 
 FSMNeander : fsm
 	PORT MAP (
@@ -229,7 +241,7 @@ FSMNeander : fsm
            operacao => wireDecFsmOut,
            flagZ => wireZout,
            flagN => wireNout,
-           sel => wireFSMMuxMASel,  
+					sel => wireFSMMuxMASel,  
 			  ulaOP => wireFsmUlaSelector,
            cargaREM => wireLoadRem ,
            sRead => wireRead,
@@ -243,6 +255,14 @@ FSMNeander : fsm
 			  selRDM => wireSelMRDM 
 	);
 
+
+REGIR : regRI 
+	PORT MAP (
+			entradaRI =>wireRDMOut,
+           saidaRI =>wireridecode,
+           clk => clk,
+			  cargaRi => wireriload,
+           reset => reset);
 
 
 ALU : UAL
@@ -322,20 +342,15 @@ MUXRDM :mux21neander
            outputMux21 => wireMuxToRdm
 		);
 		
-regRI : regACC
-		PORT MAP (
-			  cargaAC => wireRiLoad,
-           entradaAC => wireRDMOut ,
-           saidaAC => wireRiOut,
-			  clk => clk,
-			  reset => reset
-		);
+		
 		
 Decod : decodificador4x16 
 		PORT MAP (
-			entrada => wireRiOut(7 downto 4),
+			entrada => wireridecode,
          saida => wireDecFsmOut
 		);
+		
+		
 		
 		
 MEMORY : memoryNeander 
@@ -355,12 +370,18 @@ outZ <= wireZout;
 outN <= wireNout;
 outPC <= wirePCOut;
 outACC <= wireAccOut;
-wireLSBRIOut <= wireRiOutSignal;
-outIR <= wireRiOut;
+outIR <= wireridecode;
 outSinalRi <= wireriload;
 outSinalRead <= wireread;
 outSinalREM <= wireloadREM;
 outpccarga <= wireFsmPcInc;
+outmemoria <= wireMemoryOut;
+outRIcarga <= wireriload;
+saidaRDM <= wireMuxToRdm;
+
+selmuxrdm<= wireSelMRDM;
+
+
 
 end Behavioral;
 

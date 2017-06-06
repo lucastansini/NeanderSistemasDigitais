@@ -51,7 +51,7 @@ end fsm;
 
 architecture Behavioral of fsm is
 --auxiliares a maquina de estado
-TYPE t_State is(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s13);
+TYPE t_State is(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s13,st);
 signal estado, proxEstado : t_state;
 
 -- auxiliares a saida da maquina de estados
@@ -142,12 +142,29 @@ begin
 				fioCargaRDM  <= '0';
 				fioSelRDM    <= '0';
 				
+				proxestado <= st;
+				
+			when st =>
+			
+				fioSel       <= '0';
+				fioUlaOp     <= "000";
+				fioCargaREM  <= '0';
+				fioRead      <= '0';
+				fioIncPC     <= '0';
+				fioCargaRI   <= '0';
+				fioWrite     <= '0';
+				fioCargaPC   <= '0';
+				fioCargaNZ   <= '0';
+				fioCargaAcc <= '0';
+				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
+
 				if operacao = "0000000000000000"                  				 then proxEstado <= s0;
 				elsif Ula1op = '1'                     			             then proxEstado <= s3;
 				elsif (ula2op = '1' or j ='1' or operacao(1)= '1')           then proxEstado <= s4;
 				elsif nj     = '1'                  			                then proxEstado <= s5;
 				--elsif operacao = "0000000000000001"             			    then proxEstado <= estado;
-				else proxEstado <= s0;
+				else proxEstado <= s4;
 				end if;
 				
 			when s3 =>			
