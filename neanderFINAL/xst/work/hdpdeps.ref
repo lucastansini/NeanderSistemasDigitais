@@ -1,0 +1,74 @@
+V3 39
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/acc2bits.vhd" 2017/06/05.16:13:20 P.20131013
+EN work/acc2bits 1496883181 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/acc2bits.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/acc2bits/Behavioral 1496883182 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/acc2bits.vhd" \
+      EN work/acc2bits 1496883181
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/decodificador4x16.vhd" 2017/06/05.22:45:50 P.20131013
+EN work/decodificador4x16 1496883187 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/decodificador4x16.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/decodificador4x16/Behavioral 1496883188 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/decodificador4x16.vhd" \
+      EN work/decodificador4x16 1496883187
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/fsm.vhd" 2017/06/07.19:59:19 P.20131013
+EN work/fsm 1496883173 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/fsm.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/fsm/Behavioral 1496883174 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/fsm.vhd" \
+      EN work/fsm 1496883173
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/mux21_8bits.vhd" 2017/06/04.00:47:21 P.20131013
+EN work/mux21neander 1496883185 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/mux21_8bits.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux21neander/Behavioral 1496883186 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/mux21_8bits.vhd" \
+      EN work/mux21neander 1496883185
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regACC.vhd" 2017/06/04.00:40:46 P.20131013
+EN work/regACC 1496883179 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regACC.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/regACC/Behavioral 1496883180 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regACC.vhd" \
+      EN work/regACC 1496883179
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regPC.vhd" 2017/06/04.00:24:04 P.20131013
+EN work/regPC 1496883183 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regPC.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/regPC/Behavioral 1496883184 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/regPC.vhd" \
+      EN work/regPC 1496883183
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/UAL.vhd" 2017/06/05.16:40:21 P.20131013
+EN work/UAL 1496883177 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/UAL.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB ieee/std_logic_arith 1381692177
+AR work/UAL/Behavioral 1496883178 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/Neander/NeanderSistemasDigitais/Componentes/UAL.vhd" \
+      EN work/UAL 1496883177
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/coreneander.vhd" 2017/06/07.17:46:58 P.20131013
+EN work/coreneander 1496883191 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/coreneander.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/coreneander/Behavioral 1496883192 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/coreneander.vhd" \
+      EN work/coreneander 1496883191 CP fsm CP regRI CP UAL CP regACC CP acc2bits \
+      CP regPC CP mux21neander CP decodificador4x16 CP memoryNeander
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/ipcore_dir/memoryNeander.vhd" 2017/06/07.21:20:31 P.20131013
+EN work/memoryNeander 1496883189 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/ipcore_dir/memoryNeander.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/memoryNeander/memoryNeander_a 1496883190 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/ipcore_dir/memoryNeander.vhd" \
+      EN work/memoryNeander 1496883189
+FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/regRI.vhd" 2017/06/06.08:58:38 P.20131013
+EN work/regRI 1496883175 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/regRI.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/regRI/Behavioral 1496883176 \
+      FL "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/regRI.vhd" \
+      EN work/regRI 1496883175

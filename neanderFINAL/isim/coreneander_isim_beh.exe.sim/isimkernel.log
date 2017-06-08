@@ -1,0 +1,29 @@
+Command line:
+   coreneander_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53231
+
+Wed Jun 07 20:57:38 2017
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 375.505 Meg
+
+ Total Signals          : 362
+ Total Nets             : 2702
+ Total Signal Drivers   : 136
+ Total Blocks           : 29
+ Total Primitive Blocks : 21
+ Total Processes        : 94
+ Total Traceable Variables  : 226
+ Total Scalar Nets and Variables : 4074
+Total Line Count : 710
+
+ Total Simulation Time: 0.1875 sec
+
+ Current Memory Usage: 375.505 Meg
+
+Wed Jun 07 20:57:54 2017
+

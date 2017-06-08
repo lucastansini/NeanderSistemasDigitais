@@ -51,7 +51,7 @@ end fsm;
 
 architecture Behavioral of fsm is
 --auxiliares a maquina de estado
-TYPE t_State is(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s13,st);
+TYPE t_State is(s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s13,st,st4,st8,st7,st9);
 signal estado, proxEstado : t_state;
 
 -- auxiliares a saida da maquina de estados
@@ -92,6 +92,7 @@ begin
 		elsif (clk'event and clk = '1') then estado <= proxEstado;
 		end if;
 	end process;
+	
 	process(estado,operacao,ula1op,ula2op,j,nj) begin
 		case estado is
 			   
@@ -151,19 +152,20 @@ begin
 				fioCargaREM  <= '0';
 				fioRead      <= '0';
 				fioIncPC     <= '0';
-				fioCargaRI   <= '0';
+				fioCargaRI   <= '1';
 				fioWrite     <= '0';
 				fioCargaPC   <= '0';
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
 				fioSelRDM    <= '0';
+				
 
 				if operacao = "0000000000000000"                  				 then proxEstado <= s0;
 				elsif Ula1op = '1'                     			             then proxEstado <= s3;
 				elsif (ula2op = '1' or j ='1' or operacao(1)= '1')           then proxEstado <= s4;
 				elsif nj     = '1'                  			                then proxEstado <= s5;
-				--elsif operacao = "0000000000000001"             			    then proxEstado <= estado;
+				elsif operacao = "1000000000000000"             			    then proxEstado <= st;
 				else proxEstado <= s4;
 				end if;
 				
@@ -200,8 +202,24 @@ begin
 				fioCargaRDM  <= '0';
 				fioSelRDM    <= '0';
 				
+			proxEstado <= st4;
+			
+			when st4 =>
+				fioSel       <= '0';
+				fioUlaOp     <= "000";
+				fioCargaREM  <= '1';
+				fioRead      <= '0';
+				fioIncPC     <= '0';
+				fioCargaRI   <= '0';
+				fioWrite     <= '0';
+				fioCargaPC   <= '0';
+				fioCargaNZ   <= '0';
+				fioCargaAcc <= '0';
+				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
+				
 				if 	 j = '1' then proxEstado <= s10;
-				elsif  (ula2op = '1' or operacao(10) = '1') then proxEstado <= s6;
+				elsif  (ula2op = '1' or operacao(1) = '1') then proxEstado <= s6;
 				else proxEstado <= s0;
 				end if;
 				
@@ -251,6 +269,23 @@ begin
 				fioCargaRDM  <= '0';
 				fioSelRDM    <= '0';
 				
+				proxEstado <= st7;
+				
+			when st7 =>
+				fioSel       <= '1';
+				fioUlaOp     <= "000";
+				fioCargaREM  <= '1';
+				fioRead      <= '0';
+				fioIncPC     <= '0';
+				fioCargaRI   <= '0';
+				fioWrite     <= '0';
+				fioCargaPC   <= '0';
+				fioCargaNZ   <= '0';
+				fioCargaAcc <= '0';
+				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';				
+				
+				
 				proxEstado   <= s8;
 				
 			when s8 =>
@@ -267,6 +302,23 @@ begin
 				fioCargaRDM  <= '1';
 				fioSelRDM    <= '0';
 				
+				proxEstado <= st8;
+				
+			when st8=>
+			
+				fioSel       <= '0';
+				fioUlaOp     <= "000";
+				fioCargaREM  <= '0';
+				fioRead      <= '0';
+				fioIncPC     <= '0';
+				fioCargaRI   <= '0';
+				fioWrite     <= '0';
+				fioCargaPC   <= '0';
+				fioCargaNZ   <= '0';
+				fioCargaAcc <= '0';
+				fioCargaRDM  <= '0';
+				fioSelRDM    <= '0';
+				
 				if     operacao(1) = '1' then proxEstado <= s9;
 				elsif  ula2op      = '1' then proxEstado <= s13;
 				else proxEstado <= s0;
@@ -279,14 +331,30 @@ begin
 				fioRead      <= '0';
 				fioIncPC     <= '0';
 				fioCargaRI   <= '0';
+				fioWrite     <= '0';
+				fioCargaPC   <= '0';
+				fioCargaNZ   <= '0';
+				fioCargaAcc <= '0';
+				fioCargaRDM  <= '1';
+				fioSelRDM    <= '1';
+				
+				proxEstado <= st9;
+				
+		when st9=>	
+				fioSel       <= '0';
+				fioUlaOp     <= "000";
+				fioCargaREM  <= '0';
+				fioRead      <= '0';
+				fioIncPC     <= '0';
+				fioCargaRI   <= '0';
 				fioWrite     <= '1';
 				fioCargaPC   <= '0';
 				fioCargaNZ   <= '0';
 				fioCargaAcc <= '0';
 				fioCargaRDM  <= '0';
-				fioSelRDM    <= '1';
+				fioSelRDM    <= '0';
 				
-				proxEstado <= s0;
+				proxEstado<= s0;
 	
 			when s10 => 
 				fioSel       <= '0';

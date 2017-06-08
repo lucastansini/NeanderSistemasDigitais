@@ -1,0 +1,2 @@
+vhdl isim_temp "../Neander/NeanderSistemasDigitais/Componentes/UAL.vhd"
+vhdl isim_temp "../Neander/NeanderSistemasDigitais/Componentes/Test Bench/tb_UAL.vhd"

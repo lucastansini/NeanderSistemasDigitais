@@ -1,0 +1,19 @@
+ISim log file
+Running: C:\Users\Lucas\Desktop\Pastas\UFRGS\2017\01\Sistemas Digitais\Trabalho\neanderFINAL\tb_neanrersrs_isim_par.exe -intstyle ise -gui -sdfmax /uut/=netgen/par/coreneander_timesim.sdf -sdfroot /uut -tclbatch isim.cmd -wdb C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/tb_neanrersrs_isim_par.wdb 
+ISim P.20131013 (signature 0x8ef4fb42)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/coreneander_timesim.sdf, for root module /uut/.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 0 ps, Instance /tb_neanrersrs/uut/ALU_Mmult_output_7_mult0000/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 158002 ps(3), Instance /tb_neanrersrs/uut/FSMNeander_estado_FSM_FFd17/ : Warning: /X_FF RECOVERY  Low VIOLATION ON RST WITH RESPECT TO CLK;
+  Expected := 0.862 ns; Observed := 0.558 ns; At : 158.002 ns
+at 158002 ps(3), Instance /tb_neanrersrs/uut/FSMNeander_estado_FSM_FFd18/ : Warning: /X_FF RECOVERY  Low VIOLATION ON SET WITH RESPECT TO CLK;
+  Expected := 0.862 ns; Observed := 0.558 ns; At : 158.002 ns

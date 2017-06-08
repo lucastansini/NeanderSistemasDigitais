@@ -47,7 +47,6 @@ ARCHITECTURE behavior OF tb_UAL IS
          N : OUT  std_logic;
          Z : OUT  std_logic;
          selUAL : IN  std_logic_vector(2 downto 0);
-         clk : IN  std_logic
         );
     END COMPONENT;
     
@@ -56,15 +55,12 @@ ARCHITECTURE behavior OF tb_UAL IS
    signal X : std_logic_vector(7 downto 0) := (others => '0');
    signal Y : std_logic_vector(7 downto 0) := (others => '0');
    signal selUAL : std_logic_vector(2 downto 0) := (others => '0');
-   signal clk : std_logic := '0';
 
  	--Outputs
    signal outputUAL : std_logic_vector(7 downto 0);
    signal N : std_logic; 
    signal Z : std_logic; 
 
-   -- Clock period definitions
-   constant clk_period : time := 10 ns;
  
 BEGIN 
  
@@ -76,7 +72,7 @@ BEGIN
           N => N,
           Z => Z,
           selUAL => selUAL,
-          clk => clk
+
         );
 
    -- Clock process definitions

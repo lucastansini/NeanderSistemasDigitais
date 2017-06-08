@@ -1,0 +1,2 @@
+vhdl work "../Neander/NeanderSistemasDigitais/Componentes/UAL.vhd"
+vhdl work "../Neander/NeanderSistemasDigitais/Componentes/Test Bench/tb_UAL.vhd"

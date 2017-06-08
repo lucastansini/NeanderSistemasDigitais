@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/tb_neanderf_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="tb_neanderf" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="27" />
+   <wvobject fp_name="/tb_neanderf/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/rstmem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rstmem</obj_property>
+      <obj_property name="ObjectShortName">rstmem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wirefsmulaselector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wirefsmulaselector[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wirefsmulaselector[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outz</obj_property>
+      <obj_property name="ObjectShortName">outz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outn</obj_property>
+      <obj_property name="ObjectShortName">outn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outacc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">outacc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">outacc[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outpc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">outpc[7:0]</obj_property>
+      <obj_property name="ObjectShortName">outpc[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wirefsmmuxmasel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wirefsmmuxmasel</obj_property>
+      <obj_property name="ObjectShortName">wirefsmmuxmasel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outir" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">outir[3:0]</obj_property>
+      <obj_property name="ObjectShortName">outir[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outsinalri" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outsinalri</obj_property>
+      <obj_property name="ObjectShortName">outsinalri</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outsinalread" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outsinalread</obj_property>
+      <obj_property name="ObjectShortName">outsinalread</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outsinalrem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outsinalrem</obj_property>
+      <obj_property name="ObjectShortName">outsinalrem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outpccarga" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outpccarga</obj_property>
+      <obj_property name="ObjectShortName">outpccarga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outmemoria" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">outmemoria[7:0]</obj_property>
+      <obj_property name="ObjectShortName">outmemoria[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/selmuxrdm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">selmuxrdm</obj_property>
+      <obj_property name="ObjectShortName">selmuxrdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/outricarga" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">outricarga</obj_property>
+      <obj_property name="ObjectShortName">outricarga</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/clk_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_period</obj_property>
+      <obj_property name="ObjectShortName">clk_period</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wirefsmaccload" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wirefsmaccload</obj_property>
+      <obj_property name="ObjectShortName">wirefsmaccload</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wiremuxmaout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wiremuxmaout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wiremuxmaout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wirefsmulaselector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wirefsmulaselector[2:0]</obj_property>
+      <obj_property name="ObjectShortName">wirefsmulaselector[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/saidardm" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">saidardm[7:0]</obj_property>
+      <obj_property name="ObjectShortName">saidardm[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wireselmrdm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wireselmrdm</obj_property>
+      <obj_property name="ObjectShortName">wireselmrdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wireloadrdm" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wireloadrdm</obj_property>
+      <obj_property name="ObjectShortName">wireloadrdm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wireremout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wireremout[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wireremout[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wireloadrem" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wireloadrem</obj_property>
+      <obj_property name="ObjectShortName">wireloadrem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_neanderf/uut/wirefsmmuxmasel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wirefsmmuxmasel</obj_property>
+      <obj_property name="ObjectShortName">wirefsmmuxmasel</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,2 @@
+vhdl work "netgen/par/coreneander_timesim.vhd"
+vhdl work "tb_neanrersrs.vhd"

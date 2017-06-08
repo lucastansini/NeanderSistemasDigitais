@@ -1,0 +1,31 @@
+Command line:
+   tb_neanderf_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/coreneander_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  52696
+
+Wed Jun 07 20:08:22 2017
+
+
+ Elaboration Time: 0.4375 sec
+
+ Current Memory Usage: 383.705 Meg
+
+ Total Signals          : 5075
+ Total Nets             : 3655
+ Total Signal Drivers   : 3170
+ Total Blocks           : 1694
+ Total Primitive Blocks : 1023
+ Total Processes        : 3166
+ Total Traceable Variables  : 7515
+ Total Scalar Nets and Variables : 53721
+Total Line Count : 11009
+
+ Total Simulation Time: 1.04688 sec
+
+ Current Memory Usage: 698.802 Meg
+
+Wed Jun 07 20:09:55 2017
+

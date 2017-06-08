@@ -1,0 +1,2 @@
+vhdl work "../Neander/NeanderSistemasDigitais/Componentes/fsm.vhd"
+vhdl work "../Neander/NeanderSistemasDigitais/Componentes/tb_fsm.vhd"

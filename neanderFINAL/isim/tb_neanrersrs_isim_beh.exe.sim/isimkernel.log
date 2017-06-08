@@ -1,0 +1,29 @@
+Command line:
+   tb_neanrersrs_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  53837
+
+Wed Jun 07 21:45:17 2017
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 376.164 Meg
+
+ Total Signals          : 378
+ Total Nets             : 2702
+ Total Signal Drivers   : 138
+ Total Blocks           : 30
+ Total Primitive Blocks : 21
+ Total Processes        : 96
+ Total Traceable Variables  : 227
+ Total Scalar Nets and Variables : 4075
+Total Line Count : 719
+
+ Total Simulation Time: 0.25 sec
+
+ Current Memory Usage: 376.164 Meg
+
+Wed Jun 07 21:45:27 2017
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/tb_neanrersrs_isim_par.exe" -prj "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/tb_neanrersrs_par.prj" "work.tb_neanrersrs" 

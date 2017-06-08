@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Lucas/Desktop/Pastas/UFRGS/2017/01/Sistemas Digitais/Trabalho/neanderFINAL/xst"
+elaborate
+-ifn regRI.prj
+-ifmt mixed
